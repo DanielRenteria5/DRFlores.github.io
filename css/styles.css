@@ -1,0 +1,433 @@
+/*.
+#373B4A h1
+#7A00E6 primary
+#D6336C highlight
+#212536 nav
+#E9E9EB grey section
+#4D515E para text
+#A6A8AF footer
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 160 / 192 / 224 / 256 / 288 / 320
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 / 112 / 128 / 146 / 166 / 188 / 212
+*/
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scrollbar-width: none;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1;
+    font-weight: 500;
+    color: #373B4A;
+    background-color: #fff;
+}
+
+/* REUSABLES */
+.container {
+    max-width: 128rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.container-sm {
+    max-width: 64rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    column-gap: 3.2rem;
+    row-gap: 3.2rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.header-primary {
+    font-size: 3.6rem;
+    color: #212536;
+}
+
+
+.header-secondary {
+    font-size: 2rem;
+    color: #212536;
+}
+
+.general-text {
+    font-size: 1.8rem;
+    color: #373B4A;
+    line-height: 1.4;
+}
+
+.sub-header {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #7A00E6;
+    padding-bottom: 0.8rem;
+}
+
+.text-header {
+    padding-bottom: 3.2rem;
+}
+
+.btn {
+    text-transform: uppercase;
+    background-color: #E9E9EB;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn--cta {
+    font-weight: 600;
+    background-color: #7A00E6;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #d0d1d6;
+}
+
+.btn--cta:hover {
+    background-color: #D6336C;
+    transform: scale(103%);
+}
+
+/* -NAVIGATION */
+.header {
+    display: flex;
+    height: 6.4rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 6.4rem;
+}
+
+.sticky .header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6.4rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: 0 3px 0 0.3rem #E9E9EB;
+    background-color: #fff;
+    z-index: 50;
+}
+
+.sticky .section-hero {
+    margin-top: 6.4rem;
+}
+
+.nav-logo {
+    width: 16rem;
+}
+
+.main-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    list-style: none;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    color: #212536;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.3s ease-out;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+    color: #D6336C;
+}
+
+/* -MOBILE NAV */
+.btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+.icon-mobile-nav {
+    font-size: 4.4rem;
+    color: #212536;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+    display: none;
+}
+
+/* -HERO SECTION */
+.section-hero {
+    background: url(../img/home-hands.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.hero-logo {
+    padding: 6.4rem 0 1.2rem;
+    width: 32rem;
+}
+
+.hero-arrow {
+    width: 12rem;
+    padding-bottom: 9.6rem;
+}
+
+/* -PARTNERS SECTION */
+.section-partners {
+    padding: 6.4rem 0;
+}
+
+.partners {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6.4rem;
+    max-width: 100%;
+    background-color: #7A00E6;
+    padding: 6.4rem;
+}
+
+.partners img {
+    width: 32rem;
+    height: 100%;
+}
+
+/* -MEDICATIONS SECTION */
+.section-medications {
+    padding: 6.4rem 0;
+}
+
+.all-medications {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+/* each box */
+.medication {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px 0.5px hsla(229, 24%, 17%, 0.3);
+    transition: all 0.3s ease-out;
+}
+
+.filler-top-border {
+    background-color: #7A00E6;
+    height: 4rem;
+}
+
+.med-image {
+    width: 24rem;
+    padding-bottom: 3.2rem;
+}
+
+.med-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.2rem 2.4rem;
+}
+
+.medication:hover {
+    transform: scale(105%);
+    .filler-top-border {
+        background-color: #D6336C;
+    }
+}
+
+/* -MEDICATION SERVICES */
+.section-services {
+    padding: 6.4rem 0;
+    background-color: #E9E9EB;
+}
+
+.info-segments {
+    display: flex;
+    gap: 3.2rem;
+    padding-top: 3.2rem;
+}
+
+.icon ion-icon {
+    font-size: 3.2rem;
+    padding: 1.2rem;
+    border-radius: 100%;
+    background-color: #fff;
+    color: #7A00E6;
+}
+
+.segment {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* -ONCOLOGIST SECTION */
+.section-oncologist {
+    padding-top: 6.4rem;
+}
+
+.oncologist {
+    display: flex;
+    align-items: center;
+    gap: 9.6rem;
+    padding: 0 22.4rem;
+}
+
+.oncologist img {
+    width: 30rem;
+}
+
+.oncologist-text .text-header p {
+    padding-top: 1.6rem;
+}
+
+.oncologist-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+}
+
+/* -PATIENT SECTION */
+.section-patient {
+    background-color: #ffffff;
+}
+
+.patient {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 0 4.8rem 3.2rem;
+}
+
+.patient-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+}
+
+.patient img {
+    width: 76rem;
+}
+
+.patient .text-header p {
+    padding: 1.6rem 0 3.2rem;
+}
+
+.grid-segments {
+    padding-top: 3.2rem;
+}
+
+/* -CONTACT SECTION */
+.section-contact {
+    padding: 6.4rem 0;
+}
+
+.info {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.contact-info div.icon ion-icon {
+    background-color: #7A00E6;
+    color: #fff;
+}
+
+.section-contact div.contact div.text-header p {
+    padding-top: 1.6rem;
+}
+
+/* -FOOTER SECTION */
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: end;
+    padding: 0 6.4rem 1.6rem;
+}
+
+.footer img {
+    width: 16rem;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    color: #A6A8AF;
+}
+
+/* -ACCESSIBILITY */
+*:focus {
+    outline: none;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 0 0.8rem #7A00E6;
+    z-index: 1;
+}
