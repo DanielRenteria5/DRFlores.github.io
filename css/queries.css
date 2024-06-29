@@ -25,14 +25,16 @@ FONT SIZE SYSTEM (px)
 /* -TABLETS--PORTRAIT [944px] */
 @media (max-width: 59em) {
     html {
-        font-size: 52.5%;
+        font-size: 50%;
     }
 
-    .section-hero { height: 70rem;}
-    .hero-arrow { width: 10rem; padding-bottom: 6.4rem;}
-    .partners img { width: 22rem;}
+    .section-hero { height: 60rem;}
+    .hero-arrow { width: 10rem; padding-bottom: 3.2rem;}
+    .partners { padding: 3.8rem;}
+    .partners img { width: 18rem;}
 
     .all-medications { gap: 1.6rem;}
+    .med-image { width: 16rem;}
 
     .info-segments { gap: 2.4rem;}
 
@@ -158,7 +160,6 @@ FONT SIZE SYSTEM (px)
     .hero-arrow { width: 6rem; padding-bottom: 3rem;}
 
     .section-partners { padding-bottom: 0;}
-    .partners { padding: 4.4rem;}
     .partners img { width: 16rem;}
 
     .all-medications {
@@ -189,4 +190,16 @@ FONT SIZE SYSTEM (px)
     }
     .patient img { width: 58rem; order: 1;}
     .patient .text-header { order: 2;}
+}
+
+@media (max-width: 30em) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 25em) {
+    html {
+        font-size: 37%;
+    }
 }
