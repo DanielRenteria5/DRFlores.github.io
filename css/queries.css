@@ -19,7 +19,7 @@ FONT SIZE SYSTEM (px)
     .oncologist { padding: 0 12rem;}
     .hero-logo { padding: 3.2rem 0 1.2rem;}
     .section-partners { padding: 0 0 6.4rem;}
-    .med-image { width: 20rem;}
+    /* .med-image { width: 20rem;} */
 }
 
 /* -TABLETS--PORTRAIT [944px] */
@@ -34,7 +34,7 @@ FONT SIZE SYSTEM (px)
     .partners img { width: 18rem;}
 
     .all-medications { gap: 1.6rem;}
-    .med-image { width: 16rem;}
+    /* .med-image { width: 16rem;} */
 
     .info-segments { gap: 2.4rem;}
 
@@ -126,7 +126,7 @@ FONT SIZE SYSTEM (px)
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .med-image { width: 30rem;}
+    /* .med-image { width: 30rem;} */
 
 
     .info-segments {
@@ -167,7 +167,7 @@ FONT SIZE SYSTEM (px)
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .med-image { width: 26rem;}
+    /* .med-image { width: 26rem;} */
 
 
     .info-segments {

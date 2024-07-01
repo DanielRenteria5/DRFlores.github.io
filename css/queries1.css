@@ -1,0 +1,588 @@
+/* SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 160 / 192 / 224 / 256 / 288 / 320
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 / 112 / 128 / 146 / 166 / 188 / 212 */
+
+
+
+
+
+/* -X-LARGE DESKTOPS */
+@media (min-width: 75em) and (max-width: 84em) {
+    .header-primary { font-size: 3rem;}
+
+    /* section-hero */
+    .section-hero { height: 70vh;}
+    .hero-logo { width: 28rem;}
+    .hero-arrow { width: 9rem;}
+    /*  section-partners */
+    .partners img { width: 20%;}
+}
+
+/* -LARGE DESKTOPS */
+@media (min-width: 62em) and (max-width: 74.9375em) {
+    .header-primary { font-size: 2.8rem;}
+    .general-text { font-size: 1.6rem;}
+
+    /* section-hero */
+    .section-hero { height: 60vh;}
+    .hero-logo { width: 27rem; padding-top: 3.2rem;}
+    .hero-arrow { width: 8rem;}
+
+    /*  section-partners */
+    .section-partners { padding-bottom: 3.2rem;}
+    .partners { padding: 3.2rem;}
+    .partners img { width: 15%;}
+
+    /* section-medications */
+    .all-medications { gap: 2.4rem;}
+    .med-info { padding: 2.4rem 1.6rem;}
+    .info-segments { gap: 2.4rem;}
+    .section-services { padding: 6.4rem 0;}
+
+    /* setion-patient */
+    .patient { gap: 3.2rem;}
+    .grid { column-gap: 2.4rem; row-gap: 2.4rem;}
+
+    /* footer */
+    .footer { padding: 0 3.2rem 1.6rem;}
+}
+
+/* -MEDIUM DESKTOPS & TABLETS */
+@media (min-width: 48em) and (max-width: 61.9375em) {
+    /* MOBILE NAV */
+    .header {
+        padding: 0 3.2rem;
+    }
+
+    .btn-mobile-nav {
+        display: block;
+        z-index: 10;
+    }
+
+    .main-nav {
+        display: flex;
+        opacity: 0;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-color: #E9E9EB;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .nav-open .main-nav {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .main-nav-list {
+        width: 44rem;
+        text-align: center;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 3.2rem;
+        margin: 0 auto;
+    }
+
+    .main-nav-list li {
+        width: 100%;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+        border: 8px solid #7A00E6;
+        border-radius: 1.6rem;
+        font-size: 3.2rem;
+        padding: 2.4rem 3.2rem;
+        background-color: #fff;
+        width: 100%;
+    }
+
+    .nav-open .icon-mobile-nav[name="close-outline"] {
+        font-size: 6.4rem;
+        display: block;
+    }
+
+    .nav-open .icon-mobile-nav[name="menu-outline"] {
+        display: none;
+    }
+    /* /MOBILE NAV */
+
+    .header-primary { font-size: 2.4rem;}
+    .btn { font-size: 1.4rem;}
+    .sub-header { font-size: 1.6rem;}
+
+    /* nav */
+    .nav-logo { width: 14rem;}
+
+    /* section-hero */
+    .section-hero { height: 50vh;}
+    .hero-logo { width: 22rem; padding-top: 2.4rem;}
+    .hero-arrow { width: 7rem; padding-bottom: 2.4rem;}
+
+    /*  section-partners */
+    .section-partners { padding-bottom: 0;}
+    .partners { padding: 2.4rem;}
+    .partners img { width: 18%;}
+
+    /* section-medications */
+    .all-medications {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .info-segments {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-services .text-header {
+        padding-bottom: 2.4rem;
+    }
+
+    /* setion-patient */
+    .patient { gap: 2.4rem;}
+    .patient .text-header {
+        align-self: center;
+        padding: 2.4rem 0;
+    }
+    .patient-image { max-width: 50%;}
+    .padding-top-lg { padding-top: 2.4rem;}
+    .grid-segments { grid-template-columns: repeat(2, 1fr);}
+
+    /* footer */
+    .footer { padding: 0 3.2rem 1.6rem;}
+    .footer img { width: 14rem;}
+
+    .section-services { padding-bottom: 6.4rem;}
+}
+
+/* -SMALL TABLETS & LARGE PHONES */
+@media (min-width: 36em) and (max-width: 47.9375em) {
+/* MOBILE NAV */
+.header {
+    padding: 0 3.2rem;
+}
+
+.btn-mobile-nav {
+    display: block;
+    z-index: 10;
+}
+
+.main-nav {
+    display: flex;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-color: #E9E9EB;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.main-nav-list {
+    width: 44rem;
+    text-align: center;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.main-nav-list li {
+    width: 100%;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    border: 8px solid #7A00E6;
+    border-radius: 1.6rem;
+    font-size: 2.4rem;
+    padding: 2.4rem 3.2rem;
+    background-color: #fff;
+    width: 100%;
+}
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+    font-size: 6.4rem;
+    display: block;
+}
+
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+}
+/* /MOBILE NAV */
+
+/* reusable classes */
+.header-primary { font-size: 2rem;}
+.header-secondary { font-size: 1.8rem;}
+.general-text { font-size: 1.6rem;}
+.btn { font-size: 1.4rem;}
+.sub-header { font-size: 1.4rem;}
+.header { height: 5.4rem;}
+
+
+/* nav */
+.nav-logo { width: 12rem;}
+
+/* section-hero */
+.section-hero { height: 38vh;}
+.hero-logo { width: 17rem; padding-top: 0;}
+.hero-arrow { width: 5rem; padding-bottom: 1.6rem;}
+
+/*  section-partners */
+.section-partners { padding-bottom: 0;}
+.partners { padding: 2.4rem; gap: 4.8rem;}
+.partners img { width: 22%;}
+
+/* section-medications */
+.section-medications { padding: 4.8rem 0;}
+.all-medications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.info-segments {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section-services .text-header {
+    padding-bottom: 2.4rem;
+}
+
+/* section-oncologist */
+.section-oncologist { padding: 4.8rem 0 0 0;}
+.oncologist {
+    flex-direction: column;
+}
+.oncologist img { align-self: center;}
+
+/* setion-patient */
+.patient {
+    flex-direction: column;
+    gap: 2.4rem;
+}
+.patient .text-header {
+    order: 2;
+    align-self: center;
+    padding: 2.4rem 0;
+}
+.patient-image {
+    max-width: 100%;
+    order: 1;
+    align-self: center;
+    padding: 0;
+}
+.padding-top-lg { padding-top: 2.4rem;}
+.grid-segments { grid-template-columns: repeat(2, 1fr);}
+
+/* footer */
+.footer { padding: 0 3.2rem 1.6rem;}
+.footer img { width: 14rem;}
+
+.section-services { padding: 4.8rem 0;}
+}
+
+/* -MOBILE PHONES */
+@media (max-width: 35.9375em) {
+/* MOBILE NAV */
+.header {
+    padding: 0 3.2rem;
+}
+
+.btn-mobile-nav {
+    display: block;
+    z-index: 10;
+}
+
+.main-nav {
+    display: flex;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-color: #E9E9EB;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.main-nav-list {
+    width: 32rem;
+    text-align: center;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.main-nav-list li {
+    width: 100%;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    border: 8px solid #7A00E6;
+    border-radius: 1.6rem;
+    font-size: 2rem;
+    padding: 1.8rem 2.4rem;
+    background-color: #fff;
+    width: 100%;
+}
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+    font-size: 4.8rem;
+    display: block;
+}
+
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+}
+/* /MOBILE NAV */
+
+/* reusable classes */
+.header-primary { font-size: 1.8rem;}
+.header-secondary { font-size: 1.8rem;}
+.general-text { font-size: 1.6rem;}
+.btn { font-size: 1.4rem;}
+.sub-header { font-size: 1.4rem;}
+.header { height: 5.4rem;}
+
+
+/* nav */
+.nav-logo { width: 10rem;}
+
+/* section-hero */
+.section-hero { height: 35vh;}
+.hero-logo { width: 15rem; padding: 0.8rem 0 0.8rem ;}
+.hero-arrow { width: 5rem; padding-bottom: 1.2rem;}
+
+/*  section-partners */
+.section-partners { padding-bottom: 0;}
+.partners { padding: 2rem; gap: 3.2rem;}
+.partners img { width: 24%;}
+
+/* section-medications */
+.section-medications { padding: 4.8rem 0;}
+.all-medications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.2rem;
+    row-gap: 1.2rem;
+}
+
+.med-info { padding: 2.4rem 1.6rem;}
+
+.info-segments {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section-services .text-header {
+    padding-bottom: 2.4rem;
+}
+
+/* section-oncologist */
+.section-oncologist { padding: 4.8rem 0 0 0;}
+.oncologist {
+    flex-direction: column;
+}
+.oncologist img { align-self: center;}
+
+/* setion-patient */
+.patient {
+    flex-direction: column;
+    gap: 2.4rem;
+}
+.patient .text-header {
+    order: 2;
+    align-self: center;
+    padding: 2.4rem 0;
+}
+.patient-image {
+    max-width: 100%;
+    order: 1;
+    align-self: center;
+    padding: 0;
+}
+.padding-top-lg { padding-top: 2.4rem;}
+.grid-segments { grid-template-columns: repeat(2, 1fr);}
+
+/* footer */
+.footer { padding: 0 3.2rem 1.6rem;}
+.footer img { width: 14rem;}
+
+.section-services { padding: 4.8rem 0;}
+}
+
+
+/* -iPhone 13 Pro Max */
+@media only screen and (min-width: 26.875em) and (max-width: 28.75em) {
+/* MOBILE NAV */
+.header {
+    padding: 0 3.2rem;
+}
+
+.btn-mobile-nav {
+    display: block;
+    z-index: 10;
+}
+
+.main-nav {
+    display: flex;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-color: #E9E9EB;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.main-nav-list {
+    width: 32rem;
+    text-align: center;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.main-nav-list li {
+    width: 100%;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    border: 8px solid #7A00E6;
+    border-radius: 1.6rem;
+    font-size: 2rem;
+    padding: 1.8rem 2.4rem;
+    background-color: #fff;
+    width: 100%;
+}
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+    font-size: 4.8rem;
+    display: block;
+}
+
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+}
+/* /MOBILE NAV */
+
+/* reusable classes */
+.header-primary { font-size: 1.8rem;}
+.header-secondary { font-size: 1.8rem;}
+.general-text { font-size: 1.6rem;}
+.btn { font-size: 1.4rem;}
+.sub-header { font-size: 1.4rem;}
+.header { height: 5.4rem;}
+
+
+/* nav */
+.nav-logo { width: 10rem;}
+
+/* section-hero */
+.section-hero { height: 35vh;}
+.hero-logo { width: 14rem; padding: 0 0 0.8rem ;}
+.hero-arrow { width: 5rem; padding-bottom: 1.2rem;}
+
+/*  section-partners */
+.section-partners { padding-bottom: 0;}
+.partners { padding: 2rem; gap: 2.4rem;}
+.partners img { width: 28%;}
+
+/* section-medications */
+.section-medications { padding: 4.8rem 0;}
+.all-medications {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1.2rem;
+    row-gap: 1.2rem;
+}
+
+.med-info { padding: 2.4rem 1.6rem;}
+
+.info-segments {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.section-services .text-header {
+    padding-bottom: 0rem;
+}
+
+/* section-oncologist */
+.section-oncologist { padding: 4.8rem 0 0 0;}
+.oncologist {
+    flex-direction: column;
+}
+.oncologist img { align-self: center;}
+
+/* setion-patient */
+.patient {
+    flex-direction: column;
+    gap: 2.4rem;
+}
+.patient .text-header {
+    order: 2;
+    align-self: center;
+    padding: 2.4rem 0;
+}
+.patient-image {
+    max-width: 100%;
+    order: 1;
+    align-self: center;
+    padding: 0;
+}
+.padding-top-lg { padding-top: 2.4rem;}
+.grid-segments { grid-template-columns: repeat(2, 1fr);}
+
+/* footer */
+.footer { padding: 0 3.2rem 1.6rem;}
+.footer img { width: 14rem;}
+
+.section-services { padding: 4.8rem 0;}
+}
+

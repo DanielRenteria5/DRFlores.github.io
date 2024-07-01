@@ -28,7 +28,8 @@ html {
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Reddit Sans", sans-serif; */
+    font-family: "Poppins", sans-serif;
     line-height: 1;
     font-weight: 500;
     color: #373B4A;
@@ -43,7 +44,7 @@ body {
 }
 
 .container-sm {
-    max-width: 64rem;
+    max-width: 70rem;
     padding: 0 3.2rem;
     margin: 0 auto;
 }
@@ -70,42 +71,47 @@ body {
 
 .header-primary {
     font-size: 3.6rem;
+    font-weight: 800;
+    letter-spacing: 0.2px;
     color: #212536;
 }
 
 
 .header-secondary {
     font-size: 2rem;
+    font-weight: 700;
     color: #212536;
 }
 
 .general-text {
     font-size: 1.8rem;
     color: #373B4A;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .sub-header {
     display: block;
     text-transform: uppercase;
     font-size: 1.8rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.2px;
     color: #7A00E6;
     padding-bottom: 0.8rem;
 }
 
 .text-header {
-    padding-bottom: 3.2rem;
+    padding-bottom: 4.8rem;
 }
 
 .btn {
+    font-family: "Poppins";
     text-transform: uppercase;
     background-color: #E9E9EB;
     border: none;
     padding: 1.2rem;
     border-radius: 1.2rem;
     font-size: 1.6rem;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease-out;
 }
@@ -125,6 +131,16 @@ body {
     transform: scale(103%);
 }
 
+.padding-top-md {
+    padding-top: 2.4rem;
+}
+
+.padding-top-lg {
+    padding-top: 4.8rem;
+}
+
+
+
 /* -NAVIGATION */
 .header {
     display: flex;
@@ -133,6 +149,7 @@ body {
     align-items: center;
     background-color: #fff;
     padding: 0 6.4rem;
+    position: relative;
 }
 
 .sticky .header {
@@ -143,7 +160,7 @@ body {
     height: 6.4rem;
     padding-top: 0;
     padding-bottom: 0;
-    box-shadow: 0 3px 0 0.3rem #E9E9EB;
+    box-shadow: 0 3px 0 0.3rem #7A00E6;
     background-color: #fff;
     z-index: 50;
 }
@@ -201,7 +218,7 @@ body {
     background: url(../img/home-hands.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 88vh;
 }
 
 .hero {
@@ -213,19 +230,28 @@ body {
     height: 100%;
 }
 
+.hero-header {
+    padding: 0 3.2rem;
+    text-transform: uppercase;
+}
+
+.hero-header h1 {
+    letter-spacing: 0.7px;
+}
+
 .hero-logo {
-    padding: 6.4rem 0 1.2rem;
+    padding: 4.8rem 0 1.2rem;
     width: 32rem;
 }
 
 .hero-arrow {
-    width: 12rem;
-    padding-bottom: 9.6rem;
+    width: 11.2rem;
+    padding-bottom: 3.2rem;
 }
 
 /* -PARTNERS SECTION */
 .section-partners {
-    padding: 6.4rem 0;
+    padding: 0 0 6.4rem;
 }
 
 .partners {
@@ -239,8 +265,8 @@ body {
 }
 
 .partners img {
-    width: 32rem;
-    height: 100%;
+    width: 15%;
+    height: auto;
 }
 
 /* -MEDICATIONS SECTION */
@@ -272,7 +298,7 @@ body {
 }
 
 .med-image {
-    width: 24rem;
+    width: 100%;
     padding-bottom: 3.2rem;
 }
 
@@ -293,7 +319,7 @@ body {
 
 /* -MEDICATION SERVICES */
 .section-services {
-    padding: 6.4rem 0;
+    padding: 6.4rem 0 12.8rem;
     background-color: #E9E9EB;
 }
 
@@ -329,25 +355,34 @@ body {
     padding-top: 6.4rem;
 }
 
+/* ???????????? */
 .oncologist {
     display: flex;
     align-items: center;
-    gap: 9.6rem;
-    padding: 0 22.4rem;
+    gap: 4.8rem;
+    padding: 0 3.2rem;
 }
 
 .oncologist img {
-    width: 30rem;
+    flex: 1;
+    max-width: 40%;
+    object-fit: cover;
+    align-self: flex-end;
 }
 
-.oncologist-text .text-header p {
-    padding-top: 1.6rem;
+.oncologist-text {
+    max-width: 56rem;
+}
+
+.oncologist-text .text-header {
+    flex: 1;
 }
 
 .oncologist-btns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.6rem;
+    padding-bottom: 4.8rem;
 }
 
 /* -PATIENT SECTION */
@@ -358,8 +393,8 @@ body {
 .patient {
     display: flex;
     align-items: center;
-    gap: 1.6rem;
-    padding: 0 4.8rem 3.2rem;
+    gap: 4.8rem;
+    padding: 0 3.2rem;
 }
 
 .patient-btns {
@@ -368,12 +403,18 @@ body {
     gap: 1.6rem;
 }
 
-.patient img {
-    width: 76rem;
+.patient .text-header {
+    flex: 1;
+    padding-bottom: 0;
 }
 
-.patient .text-header p {
-    padding: 1.6rem 0 3.2rem;
+.patient-image {
+    flex: 1;
+    align-self: flex-start;
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
+    padding-bottom: 6.4rem;
 }
 
 .grid-segments {
