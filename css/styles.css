@@ -71,7 +71,7 @@ body {
 
 .header-primary {
     font-size: 3.6rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.2px;
     color: #212536;
 }
@@ -93,7 +93,7 @@ body {
     display: block;
     text-transform: uppercase;
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.2px;
     color: #7A00E6;
     padding-bottom: 0.8rem;
@@ -215,10 +215,8 @@ body {
 
 /* -HERO SECTION */
 .section-hero {
-    background: url(../img/home-hands.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 88vh;
+    padding: 2.4rem 0;
+    margin: 0 auto;
 }
 
 .hero {
@@ -237,16 +235,28 @@ body {
 
 .hero-header h1 {
     letter-spacing: 0.7px;
+    padding-bottom: 2.4rem;
 }
 
 .hero-logo {
-    padding: 4.8rem 0 1.2rem;
+    padding-bottom: 1.6rem;
+    height: auto;
     width: 32rem;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-mobile-image {
+    display: none;
+    height: auto;
+    width: 100%;
 }
 
 .hero-arrow {
     width: 11.2rem;
-    padding-bottom: 3.2rem;
+    padding-bottom: 2.4rem;
 }
 
 /* -PARTNERS SECTION */
@@ -265,6 +275,7 @@ body {
 }
 
 .partners img {
+    display: block;
     width: 15%;
     height: auto;
 }
@@ -300,6 +311,7 @@ body {
 .med-image {
     width: 100%;
     padding-bottom: 3.2rem;
+    display: block;
 }
 
 .med-info {
@@ -310,12 +322,12 @@ body {
     padding: 3.2rem 2.4rem;
 }
 
-.medication:hover {
+/* .medication:hover {
     transform: scale(105%);
     .filler-top-border {
         background-color: #D6336C;
     }
-}
+} */
 
 /* -MEDICATION SERVICES */
 .section-services {
@@ -355,7 +367,6 @@ body {
     padding-top: 6.4rem;
 }
 
-/* ???????????? */
 .oncologist {
     display: flex;
     align-items: center;
@@ -366,8 +377,10 @@ body {
 .oncologist img {
     flex: 1;
     max-width: 40%;
+    height: auto;
     object-fit: cover;
     align-self: flex-end;
+    display: block;
 }
 
 .oncologist-text {
@@ -415,6 +428,7 @@ body {
     height: auto;
     object-fit: cover;
     padding-bottom: 6.4rem;
+    display: block;
 }
 
 .grid-segments {
