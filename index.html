@@ -77,40 +77,61 @@
                     <div class="filler-top-border"></div>
                     <div class="med-info">
                         <img src="img/med-tusa-1.png" alt="" class="med-image">
-                        <p class="general-text">
+                        <!-- <p class="general-text">
                             Please see full <a href="#">Prescribing Information</a>, Boxed WARNING, and <a href="#">Patient Information</a>.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
                 <div class="medication">
                     <div class="filler-top-border"></div>
                     <div class="med-info">
                         <img src="img/med-jev-2.png" alt=""  class="med-image">
-                        <p class="general-text">
+                        <!-- <p class="general-text">
                            Please see full <a href="#">Prescribing Information</a>, Boxed WARNING, and <a href="#">Patient Information</a>.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
                 <div class="medication">
                     <div class="filler-top-border"></div>
                     <div class="med-info">
                         <img src="img/med-sar-3.png" alt=""  class="med-image">
-                        <p class="general-text">
+                        <!-- <p class="general-text">
                            Please see full <a href="#">Prescribing Information</a>, Boxed WARNING, and <a href="#">Patient Information</a>.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
                 <div class="medication">
                     <div class="filler-top-border"></div>
                     <div class="med-info">
                         <img src="img/med-eli-4.png" alt=""  class="med-image">
-                        <p class="general-text">
+                        <!-- <p class="general-text">
                            Please see full <a href="#">Prescribing Information</a>, Boxed WARNING, and <a href="#">Patient Information</a>.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
+            <p class="general-text container padding-top-md text-center">
+                Please see full <a href="#" class="prescription-modal-open">Prescribing Information</a>, Boxed WARNING, and <a href="#" class="prescription-modal-open">Patient Information</a>.
+            </p>
         </section>
+
+        <!-- -MODAL: PRESCRIPTION & PATIENT INFORMATION -->
+        <div class="prescription-modal hidden">
+            <ion-icon name="close-outline" id="prescription-modal-close" class="modal-close-icon"></ion-icon>
+            <div class="prescription-info">
+                <h2 class="header-secondary">Prescription Information:</h2>
+                <p class="general-text padding-top-sm">For detailed guidelines on dosage, administration, contraindications, and warnings, please refer to the full Prescription Information provided.</p>
+            </div>
+            <div class="boxed-warning">
+                <h2 class="header-secondary">Boxed Warning:</h2>
+                <p class="general-text padding-top-sm">A Boxed Warning highlights the most critical risks associated with this product. Please review this section carefully for important safety information.</p>
+            </div>
+            <div class="patient-info">
+                <h2 class="header-secondary">Patient Information:</h2>
+                <p class="general-text padding-top-sm">Patients are encouraged to review the Patient Information for instructions on proper usage, potential side effects, and other essential details. Consult your healthcare provider for personalized guidance.</p>
+            </div>
+        </div>
+        <div class="modal-underlay hidden"></div>
 
         <!-- ?MEDICATION SERVICES -->
         <section class="section-services">
@@ -175,12 +196,31 @@
                         </p>
                     </div>
                     <div class="oncologist-btns">
-                        <button class="btn">Learn More</button>
-                        <button class="btn btn--cta">Register</button>
+                        <button class="btn" id="oncol-more-open">Learn More</button>
+                        <button class="btn btn--cta oncol-register-open">Register</button>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- -MODAL-ONCOLOGIST-LEARN MORE -->
+        <div class="oncologist-more-modal hidden">
+            <ion-icon name="close-outline" id="oncol-close" class="modal-close-icon"></ion-icon>
+            <!-- <p class="general-text">At OneHEALTH®, we are committed to supporting oncologists, their support staff, and patients throughout their treatment journey. Our comprehensive services are designed to streamline the process, ensuring that everyone involved can focus on what truly matters—patient care.</p> -->
+            <div class="learn-more-section">
+                <h2 class="header-secondary">Enrollment and Insurance Coverage</h2>
+                <p class="general-text padding-top-sm">Navigating the complexities of insurance can be daunting. Our team provides expert assistance with enrollment and determines the best insurance coverage options available for oncology medications. We work diligently to ensure that patients receive the treatments they need without unnecessary delays.</p>
+            </div>
+            <div class="learn-more-section"> <h2 class="header-secondary">Financial Assistance</h2>
+                <p class="general-text padding-top-sm">We understand that the cost of treatment can be a significant burden. OneHEALTH® offers various financial assistance programs to help mitigate these costs. Our team will work with you and your patients to explore all available options and find the best solutions to ease the financial strain.</p>
+            </div>
+            <div class="learn-more-section"><h2 class="header-secondary">Educational Resources</h2>
+                <p class="general-text padding-top-sm">Staying informed is crucial in the ever-evolving field of oncology. We provide access to a wealth of educational resources, including the latest research, treatment protocols, and patient education materials. Our goal is to empower you and your patients with the knowledge needed to make informed decisions about care.</p>
+            </div>
+            <div class="learn-more-section"><h2 class="header-secondary">Dedicated Support</h2>
+                <p class="general-text padding-top-sm">Our dedicated team acts as an extension of your practice, providing reliable and consistent support. We are here to answer questions, provide guidance, and ensure that both you and your patients feel supported throughout the treatment process.</p>
+            </div>
+            <p class="general-text padding-top-sm">To learn more about how OneHEALTH® can assist you, your staff, and your patients, please contact us today. Together, we can ensure the best possible outcomes for those in your care.</p>
+        </div>
 
         <!-- ?ONCOLOGIST RESOURCES -->
         <section class="section-services">

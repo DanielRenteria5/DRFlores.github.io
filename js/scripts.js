@@ -58,3 +58,85 @@ navLinks.forEach((link) => {
     headerEle.classList.remove("nav-open");
   });
 });
+
+// #MODALS GLOBAL
+const modalUnderlay = document.querySelector(".modal-underlay");
+
+// #MODAL-PRESCRIPT and PATIENT INFO - close
+const prescOpen = document.querySelectorAll(".prescription-modal-open");
+const prescClose = document.querySelector("#prescription-modal-close");
+
+// modal-window
+const prescModal = document.querySelector(".prescription-modal");
+
+// CLOSE modal
+prescClose.addEventListener("click", function () {
+  prescModal.classList.add("hidden");
+  modalUnderlay.classList.add("hidden");
+});
+
+// OPEN modal
+prescOpen.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    prescModal.classList.remove("hidden");
+    modalUnderlay.classList.remove("hidden");
+    prescModal.classList.add("flex");
+  });
+});
+
+// prevents scrolling on UNDERLAY when modal is open
+modalUnderlay.addEventListener("wheel", function (event) {
+  event.preventDefault();
+});
+
+// prevents scrolling on opened MODAL
+prescModal.addEventListener("wheel", function (event) {
+  event.preventDefault();
+});
+
+// #MODAL-ONCOLOGIST LEARN MORE
+// LEARN MORE button
+const oncolMoreOpen = document.getElementById("oncol-more-open");
+// close button
+const oncolClose = document.getElementById("oncol-close");
+
+// oncol-learn-more-modal
+const oncolModal = document.querySelector(".oncologist-more-modal");
+
+// CLOSE modal
+oncolClose.addEventListener("click", function () {
+  oncolModal.classList.add("hidden");
+  modalUnderlay.classList.add("hidden");
+});
+
+// OPEN modal
+oncolMoreOpen.addEventListener("click", function () {
+  oncolModal.classList.remove("hidden");
+  modalUnderlay.classList.remove("hidden");
+  oncolModal.classList.add("flex");
+});
+
+oncolModal.addEventListener("wheel", function (event) {
+  event.preventDefault();
+});
+
+document.addEventListener("keydown", function (e) {
+  if (
+    (e.key === "Escape" && !oncolModal.classList.contains("hidden")) ||
+    !prescModal.classList.contains("hidden")
+  ) {
+    // closeModal();
+    oncolModal.classList.add("hidden");
+    modalUnderlay.classList.add("hidden");
+    prescModal.classList.add("hidden");
+  }
+});
+
+modalUnderlay.addEventListener("click", function () {
+  oncolModal.classList.add("hidden");
+  modalUnderlay.classList.add("hidden");
+  prescModal.classList.add("hidden");
+});
+
+const oncolRegOpen = document.querySelector("oncol-register-open");
