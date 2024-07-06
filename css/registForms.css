@@ -1,0 +1,56 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-registration {
+    padding: 3.2rem 0;
+}
+
+.main-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+.main-form label {
+    font-size: 1.6rem;
+    padding-bottom: 1.6rem;
+    display: block;
+}
+
+.main-form input,
+.main-form select {
+    font-family: inherit;
+    font-size: 1.6rem;
+    border: none;
+    background-color: #E9E9EB;
+    border-radius: 1.2rem;
+    width: 100%;
+    padding: 1.2rem;
+}
+
+::placeholder {
+    color: #A6A8AF;
+}
+
+.main-form button {
+    align-self: flex-end;
+}
+
+.section-footer {
+    align-self: flex-end;
+}
+
+/* #PATIENT */
+/* !try to add a query for a bigger screen; see if that resolves the vh so that the forms display properly */
+
+/* !for the 2 FORMS, might be necessary to change the header classes if smaller queries trigger the alternative mob menu */

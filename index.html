@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneHealth</title>
+    <title>OneHEALTH®</title>
+    <link rel="preload" href="img/hands-hero.jpg" as="image">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +15,13 @@
     <link rel="stylesheet" href="css/queries1.css">
 </head>
 
-<body>
+<body id="home">
     <header class="header">
         <a href="#home">
             <img src="img/logo.png" alt="One Health logo" class="nav-logo">
         </a>
 
-        <nav class="main-nav">
+        <nav class="main-nav" >
             <ul class="main-nav-list">
                 <li><a href="#home" class="main-nav-link">Home</a></li>
                 <li><a href="#medications" class="main-nav-link">Medications</a></li>
@@ -38,32 +39,32 @@
 
     <main>
         <!-- -HERO SECTION - HOME -->
-        <section class="section-hero" id="home">
+        <section class="section-hero">
             <div class="hero">
-                <div class="hero-header">
+                <div class="hero-header fade">
                     <img src="img/logo.png" alt="One Health Logo" class="hero-logo">
                     <h1 class="header-primary">Helping patients access their medication</h1>
                 </div>
 
-                <img src="img/hands-hero.jpg" alt="A hand reaching for a hand." class="hero-image">
+                <img src="img/hands-hero.jpg" alt="A hand reaching for a hand." class="hero-image fade">
 
-                <img src="img/hands-mobile.jpg" alt="A hand reaching for a hand." class="hero-mobile-image">
+                <img src="img/hands-mobile.jpg" alt="A hand reaching for a hand." class="hero-mobile-image fade">
 
-                <img src="img/hero-arrow-down.png" alt="Arrow pointing down to the rest of the page." class="hero-arrow">
+                <img src="img/hero-arrow-down.png" alt="Arrow pointing down to the rest of the page." class="hero-arrow fade">
             </div>
         </section>
 
         <!-- -PARTNERS LOGOS -->
         <section class="section-partners">
             <div class="partners">
-                <img src="img/partner-2.png" alt="Kaiser Logo">
-                <img src="img/partner-1.png" alt="Centene">
-                <img src="img/partner-3.png" alt="A logo">
+                <img src="img/partner-2.png" alt="Medcore Health logo">
+                <img src="img/partner-1.png" alt="Centoen Health logo">
+                <img src="img/partner-3.png" alt="Medella Health logo">
             </div>
         </section>
         <!-- -SECTION MEDICATIONS -->
         <section class="section-medications" id="medications">
-            <div class="text-header container">
+            <div class="section-headers container">
                 <span class="sub-header">Medications</span>
                 <h1 class="header-primary">
                     We offer the following medications through our programs
@@ -77,36 +78,24 @@
                     <div class="filler-top-border"></div>
                     <div class="med-info">
                         <img src="img/med-tusa-1.png" alt="" class="med-image">
-                        <!-- <p class="general-text">
-                            Please see full <a href="#">Prescribing Information</a>, Boxed WARNING, and <a href="#">Patient Information</a>.
-                        </p> -->
                     </div>
                 </div>
                 <div class="medication">
                     <div class="filler-top-border"></div>
                     <div class="med-info">
                         <img src="img/med-jev-2.png" alt=""  class="med-image">
-                        <!-- <p class="general-text">
-                           Please see full <a href="#">Prescribing Information</a>, Boxed WARNING, and <a href="#">Patient Information</a>.
-                        </p> -->
                     </div>
                 </div>
                 <div class="medication">
                     <div class="filler-top-border"></div>
                     <div class="med-info">
                         <img src="img/med-sar-3.png" alt=""  class="med-image">
-                        <!-- <p class="general-text">
-                           Please see full <a href="#">Prescribing Information</a>, Boxed WARNING, and <a href="#">Patient Information</a>.
-                        </p> -->
                     </div>
                 </div>
                 <div class="medication">
                     <div class="filler-top-border"></div>
                     <div class="med-info">
                         <img src="img/med-eli-4.png" alt=""  class="med-image">
-                        <!-- <p class="general-text">
-                           Please see full <a href="#">Prescribing Information</a>, Boxed WARNING, and <a href="#">Patient Information</a>.
-                        </p> -->
                     </div>
                 </div>
             </div>
@@ -135,7 +124,7 @@
 
         <!-- ?MEDICATION SERVICES -->
         <section class="section-services">
-            <div class="text-header container">
+            <div class="section-headers container">
                 <span class="sub-header">Services</span>
                 <h1 class="header-primary">
                     We can guide you through your treatment journey and help with
@@ -184,9 +173,9 @@
         <!-- -ONCOLOGIST -->
         <section class="section-oncologist" id="oncologist">
             <div class="oncologist container">
-                <img src="img/oncol.jpg" alt="Picture of an oncologist in work attire">
+                <img src="img/oncologist.jpg" alt="Picture of an oncologist in work attire">
                 <div class="oncologist-text">
-                    <div class="text-header">
+                    <div class="section-headers">
                         <span class="sub-header">Oncologist</span>
                         <h1 class="header-primary">
                             Let's make this easy
@@ -197,7 +186,7 @@
                     </div>
                     <div class="oncologist-btns">
                         <button class="btn" id="oncol-more-open">Learn More</button>
-                        <button class="btn btn--cta oncol-register-open">Register</button>
+                        <button class="btn btn--cta" id="oncol-register-open">Register</button>
                     </div>
                 </div>
             </div>
@@ -205,26 +194,25 @@
         <!-- -MODAL-ONCOLOGIST-LEARN MORE -->
         <div class="oncologist-more-modal hidden">
             <ion-icon name="close-outline" id="oncol-close" class="modal-close-icon"></ion-icon>
-            <!-- <p class="general-text">At OneHEALTH®, we are committed to supporting oncologists, their support staff, and patients throughout their treatment journey. Our comprehensive services are designed to streamline the process, ensuring that everyone involved can focus on what truly matters—patient care.</p> -->
-            <div class="learn-more-section">
-                <h2 class="header-secondary">Enrollment and Insurance Coverage</h2>
-                <p class="general-text padding-top-sm">Navigating the complexities of insurance can be daunting. Our team provides expert assistance with enrollment and determines the best insurance coverage options available for oncology medications. We work diligently to ensure that patients receive the treatments they need without unnecessary delays.</p>
-            </div>
-            <div class="learn-more-section"> <h2 class="header-secondary">Financial Assistance</h2>
+
+            <div class="learn-more-section padding-top-md container-sm">
+                <h2 class="header-secondary">Financial Assistance</h2>
                 <p class="general-text padding-top-sm">We understand that the cost of treatment can be a significant burden. OneHEALTH® offers various financial assistance programs to help mitigate these costs. Our team will work with you and your patients to explore all available options and find the best solutions to ease the financial strain.</p>
             </div>
-            <div class="learn-more-section"><h2 class="header-secondary">Educational Resources</h2>
+            <div class="learn-more-section padding-top-md container-sm">
+                <h2 class="header-secondary">Educational Resources</h2>
                 <p class="general-text padding-top-sm">Staying informed is crucial in the ever-evolving field of oncology. We provide access to a wealth of educational resources, including the latest research, treatment protocols, and patient education materials. Our goal is to empower you and your patients with the knowledge needed to make informed decisions about care.</p>
             </div>
-            <div class="learn-more-section"><h2 class="header-secondary">Dedicated Support</h2>
+            <div class="learn-more-section padding-top-md container-sm">
+                <h2 class="header-secondary">Dedicated Support</h2>
                 <p class="general-text padding-top-sm">Our dedicated team acts as an extension of your practice, providing reliable and consistent support. We are here to answer questions, provide guidance, and ensure that both you and your patients feel supported throughout the treatment process.</p>
             </div>
-            <p class="general-text padding-top-sm">To learn more about how OneHEALTH® can assist you, your staff, and your patients, please contact us today. Together, we can ensure the best possible outcomes for those in your care.</p>
+            <p class="general-text container-sm padding-top-sm">To learn more about how OneHEALTH® can assist you, your staff, and your patients, please contact us today.</p>
         </div>
 
         <!-- ?ONCOLOGIST RESOURCES -->
         <section class="section-services">
-            <div class="text-header container">
+            <div class="section-headers container">
                 <span class="sub-header">Oncologist Resources</span>
                 <h1 class="header-primary">
                     Here is how you can help your patients
@@ -273,7 +261,7 @@
         <!-- -PATIENT -->
         <section class="section-patient" id="patient">
             <div class="patient container">
-                <div class="text-header">
+                <div class="section-headers">
                     <span class="sub-header">
                         Patient
                     </span>
@@ -284,16 +272,16 @@
                         Because going with the best possible treatment matters, and so does insurance coverage.
                     </p>
                     <div class="patient-btns padding-top-lg">
-                        <button class="btn">Learn More</button>
-                        <button class="btn btn--cta">Register</button>
+                        <button class="btn" id="patient-more-open">Learn More</button>
+                        <button class="btn btn--cta" id="patient-register-open">Apply</button>
                     </div>
                 </div>
-                <img src="img/patnts.jpg" alt="Two hands holding each other." class="patient-image">
+                <img src="img/patients.jpg" alt="Two hands holding each other." class="patient-image">
             </div>
 
             <!-- ?PATIENT RESOURCES -->
             <section class="section-services">
-                <div class="text-header container">
+                <div class="section-headers container">
                     <span class="sub-header">Patient Resources</span>
                     <h1 class="header-primary">
                         We are here to help you in every way possible
@@ -358,54 +346,66 @@
                     </div>
                 </div>
             </section>
+        </section>
+        <!-- -MODAL-PATIENT-LEARN MORE -->
+        <div class="patient-more-modal hidden">
+            <ion-icon name="close-outline" id="patient-close" class="modal-close-icon"></ion-icon>
 
-            <section class="section-contact" id="contact">
-                <div class="contact container-sm">
-                    <div class="text-header">
-                        <span class="sub-header">
-                            Contact
-                        </span>
-                        <h1 class="header-primary">
-                            For OneHealth Concierge Service
-                        </h1>
-                        <p class="general-text">
-                            We are available 24/7 to help with your application process and any questions about our programs and the medications we offer.
-                        </p>
-                    </div>
-                </div>
-                <div class="contact-info container-sm">
-                    <div class="info">
-                        <div class="icon">
-                            <ion-icon name="call-outline"></ion-icon>
-                        </div>
-                        <p class="general-text">1-800-800-8000</p>
-                    </div>
-                    <div class="info">
-                        <div class="icon">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-                        <p class="general-text">575 5th Ave. 3rd Floor<br>
-                            New York, NY 10017</p>
-                    </div>
-                    <div class="info">
-                        <div class="icon">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-                        <p class="general-text">support@onehealth.com</p>
-                    </div>
-                </div>
-            </section>
+            <div class="learn-more-section padding-top-md container-sm">
+                <h2 class="header-secondary">Treatment Access Matters</h2>
+                <p class="general-text padding-top-sm">Understanding insurance coverage, reimbursement, and financial support options can be challenging. Our experts are here to guide you through these important matters, ensuring you have access to the treatments you need.</p>
+            </div>
+            <div class="learn-more-section padding-top-md container-sm">
+                <h2 class="header-secondary">Continuity of Care</h2>
+                <p class="general-text padding-top-sm">Whether you're transitioning from hospital to home or moving between different care settings, we prioritize continuity of care to ensure your health needs are consistently met.</p>
+            </div>
+            <p class="general-text container-sm padding-top-sm">To learn more about how OneHEALTH® can assist you, your staff, and your patients, please contact us today.</p>
+        </div>
 
-            <footer class="section-footer">
-                <div class="footer">
-                    <img src="img/logo-grey.png" alt="One Health logo in gray.">
-                    <span class="copyright">© 2024 OneHealth U.S. LLC. All rights reserved.</span>
+        <!-- -SECTION-CONTACT -->
+        <section class="section-contact" id="contact">
+            <div class="contact container-sm">
+                <div class="section-headers">
+                    <span class="sub-header">
+                        Contact
+                    </span>
+                    <h1 class="header-primary">
+                        For OneHealth Concierge Service
+                    </h1>
+                    <p class="general-text">
+                        We are available 24/7 to help with your application process and any questions about our programs and the medications we offer.
+                    </p>
                 </div>
-            </footer>
-
+            </div>
+            <div class="contact-info container-sm">
+                <div class="info">
+                    <div class="icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </div>
+                    <p class="general-text">1-800-800-8000</p>
+                </div>
+                <div class="info">
+                    <div class="icon">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+                    <p class="general-text">575 5th Ave. 3rd Floor<br>
+                        New York, NY 10017</p>
+                </div>
+                <div class="info">
+                    <div class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <p class="general-text">support@onehealth.com</p>
+                </div>
+            </div>
         </section>
 
-
+        <footer class="section-footer">
+            <div class="footer">
+                <img src="img/logo-grey.png" alt="One Health logo in gray.">
+                <span class="copyright">© 2024 OneHealth U.S. LLC. All rights reserved.</span>
+            </div>
+        </footer>
     </main>
 
     <!-- ION ICONS -->

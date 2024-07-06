@@ -1,4 +1,3 @@
-// #STICKY NAV
 const sectionHeroElem = document.querySelector(".section-hero");
 
 const docObserver = new IntersectionObserver(
@@ -9,7 +8,7 @@ const docObserver = new IntersectionObserver(
       document.body.classList.add("sticky");
     }
 
-    // if HERO SEC is interseting = true, then remove STICKY class from nav
+    // if HERO SEC is intersecting, then remove STICKY class from nav
     if (ent.isIntersecting) {
       document.body.classList.remove("sticky");
     }
@@ -20,8 +19,11 @@ const docObserver = new IntersectionObserver(
     rootMargin: "-160px",
   }
 );
-// ELE to be observed = .section-hero; since we want the STICKY nav to appear when the hero section is SCROLLED out of the VP.
-docObserver.observe(sectionHeroElem);
+
+// Element to be observed = .section-hero; since we want the STICKY nav to appear when the hero section is scrolled out of the VP.
+if (sectionHeroElem) {
+  docObserver.observe(sectionHeroElem);
+}
 
 // #NAV LINK CLICK OFFSET
 document.addEventListener("DOMContentLoaded", () => {
@@ -59,7 +61,7 @@ navLinks.forEach((link) => {
   });
 });
 
-// #MODALS GLOBAL
+// #MODALS - bckg for all
 const modalUnderlay = document.querySelector(".modal-underlay");
 
 // #MODAL-PRESCRIPT and PATIENT INFO - close
@@ -126,7 +128,6 @@ document.addEventListener("keydown", function (e) {
     (e.key === "Escape" && !oncolModal.classList.contains("hidden")) ||
     !prescModal.classList.contains("hidden")
   ) {
-    // closeModal();
     oncolModal.classList.add("hidden");
     modalUnderlay.classList.add("hidden");
     prescModal.classList.add("hidden");
@@ -137,6 +138,98 @@ modalUnderlay.addEventListener("click", function () {
   oncolModal.classList.add("hidden");
   modalUnderlay.classList.add("hidden");
   prescModal.classList.add("hidden");
+  patientModal.classList.add("hidden");
 });
 
-const oncolRegOpen = document.querySelector("oncol-register-open");
+// #ONCOL to REGISTRATION PAGE from REG btn
+const oncolRegister = document.getElementById("oncol-register-open");
+
+oncolRegister.addEventListener("click", function () {
+  window.location.href = "oncologistRegisterForm.html";
+});
+
+// #PATIENT to REGISTRATIONG PAGE from APPLY btn
+const patientRegister = document.getElementById("patient-register-open");
+
+patientRegister.addEventListener("click", function () {
+  window.location.href = "patientRegisterForm.html";
+});
+
+// #MODAL-PATIENT-LEARN MORE
+const patientMoreOpen = document.getElementById("patient-more-open");
+const patientModal = document.querySelector(".patient-more-modal");
+
+patientMoreOpen.addEventListener("click", function () {
+  patientModal.classList.remove("hidden");
+  patientModal.classList.add("flex");
+  modalUnderlay.classList.remove("hidden");
+});
+
+const patientClose = document.getElementById("patient-close");
+patientClose.addEventListener("click", function () {
+  patientModal.classList.add("hidden");
+  modalUnderlay.classList.add("hidden");
+});
+
+patientModal.addEventListener("wheel", function (event) {
+  event.preventDefault();
+});
+
+document.addEventListener("keydown", function (e) {
+  if (
+    (e.key === "Escape" && !patientModal.classList.contains("hidden")) ||
+    !prescModal.classList.contains("hidden")
+  ) {
+    patientModal.classList.add("hidden");
+    modalUnderlay.classList.add("hidden");
+    prescModal.classList.add("hidden");
+  }
+});
+
+// #ANIMATIONS
+// hero section
+const loadAnimation = function (ele, className) {
+  ele.classList.add(className);
+  // Check if element has been loaded
+  if (ele.complete) {
+    if (typeof ele.onload === "function") {
+      ele.onload();
+    }
+    // otherwise, ensure the class is added again on onload if needed
+  } else {
+    ele.onload = function () {
+      ele.classList.add(className);
+    };
+  }
+};
+
+const heroImage = document.querySelector(".hero-image");
+const heroHeader = document.querySelector(".hero-header");
+const heroArrow = document.querySelector(".hero-arrow");
+const heroImgMob = document.querySelector(".hero-mobile-image");
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadAnimation(heroHeader, "show");
+  loadAnimation(heroArrow, "show");
+  loadAnimation(heroImage, "show");
+  loadAnimation(heroImgMob, "show");
+});
+
+// #DISABLE preload hero for mobile
+if (window.matchMedia("(min-width: 767px)").matches) {
+  var heroPreLoad = document.querySelector(
+    'link[href="img/hands-hero.jpg"][rel="preload"][as="image"]'
+  );
+  if (heroPreLoad) {
+    heroPreLoad.parentNode.removeChild(heroPreLoad);
+  }
+}
+
+if (window.matchMedia("(max-width: 991px)").matches) {
+  var heroPreLoad = document.querySelector(
+    'link[href="path/to/image.jpg"][rel="preload"][as="image"]'
+  );
+  if (heroPreLoad) {
+    heroPreLoad.parentNode.removeChild(heroPreLoad);
+  }
+}
