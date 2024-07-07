@@ -13,10 +13,6 @@ FONT SIZE SYSTEM (px)
     .hero-arrow { width: 9rem;}
     /*  section-partners */
     .partners img { width: 20%;}
-
-    /* prescription modal */
-    .prescription-modal { width: 50%;}
-    /* oncol-learn-more modal */
 }
 
 /* -LARGE DESKTOPS */
@@ -47,15 +43,9 @@ FONT SIZE SYSTEM (px)
     .footer { padding: 0 3.2rem 1.6rem;}
 
     /* prescription modal */
-    .prescription-modal { width: 60%;}
-    /* oncol-learn-more modal */
-    .oncologist-more-modal { width: 70%; padding: 2.4rem;}
-    .oncologist-more-modal .learn-more-section { padding: 0;}
-    .oncologist-more-modal .general-text { padding: 0;}
-    /* patient-more-modal */
-    .patient-more-modal { width: 60%; padding: 2.4rem;}
-    .patient-more-modal .learn-more-section { padding: 0;}
-    .patient-more-modal .general-text { padding: 0;}
+    /* .prescription-modal { width: 100%;} */
+    /* patient-more-modal, oncol-more-modal */
+    /* .patient-more-modal, .oncologist-more-modal { width: 100%;} */
 }
 
 /* -MEDIUM DESKTOPS & TABLETS */
@@ -180,14 +170,7 @@ FONT SIZE SYSTEM (px)
 
     .section-services { padding-bottom: 6.4rem;}
 
-    /* prescription modal */
-    .prescription-modal { width: 70%;}
-    /* oncol-learn-more modal */
-    .oncologist-more-modal { width: 80%; padding: 2.4rem; gap: 2.4rem;}
-    .oncologist-more-modal .learn-more-section { padding-top: 0;}
-    /* patient-more-modal */
-    .patient-more-modal { width: 80%; padding: 2.4rem; gap: 2.4rem;}
-    .patient-more-modal .learn-more-section { padding-top: 0;}
+    /* ALL modals */
 
 }
 
@@ -360,14 +343,10 @@ FONT SIZE SYSTEM (px)
 
     .section-services { padding: 4.8rem 0;}
 
-    /* prescription modal */
-    .prescription-modal { width: 70%;}
-    /* oncol-learn-more modal */
-    .oncologist-more-modal { width: 80%; padding: 2.4rem; gap: 2.4rem;}
-    .oncologist-more-modal .learn-more-section { padding-top: 0;}
-    /* patient-more-modal */
-    .patient-more-modal { width: 80%; padding: 2.4rem; gap: 2.4rem;}
-    .patient-more-modal .learn-more-section { padding-top: 0;}
+    /* ALL modals */
+    .body-all-text {width: 48rem;}
+    /* registration form Oncologist */
+    .main-form { grid-template-columns: 1fr}
 }
 
 /* -MOBILE PHONES */
@@ -537,14 +516,8 @@ FONT SIZE SYSTEM (px)
 
     .section-services { padding: 4.8rem 0;}
 
-    /* prescription modal */
-    .prescription-modal { width: 70%;}
-    /* oncol-learn-more modal */
-    .oncologist-more-modal { width: 90%; padding: 2.4rem; gap: 2.4rem;}
-    .oncologist-more-modal .learn-more-section { padding-top: 0;}
-    /* patient-more-modal */
-    .patient-more-modal { width: 90%; padding: 2.4rem; gap: 2.4rem;}
-    .patient-more-modal .learn-more-section { padding-top: 0;}
+    /* ALL modals */
+    .body-all-text { width: 28rem;}
 }
 
 

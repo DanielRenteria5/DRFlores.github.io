@@ -61,9 +61,6 @@ navLinks.forEach((link) => {
   });
 });
 
-// #MODALS - bckg for all
-const modalUnderlay = document.querySelector(".modal-underlay");
-
 // #MODAL-PRESCRIPT and PATIENT INFO - close
 const prescOpen = document.querySelectorAll(".prescription-modal-open");
 const prescClose = document.querySelector("#prescription-modal-close");
@@ -74,7 +71,6 @@ const prescModal = document.querySelector(".prescription-modal");
 // CLOSE modal
 prescClose.addEventListener("click", function () {
   prescModal.classList.add("hidden");
-  modalUnderlay.classList.add("hidden");
 });
 
 // OPEN modal
@@ -82,19 +78,20 @@ prescOpen.forEach((link) => {
   link.addEventListener("click", function (event) {
     event.preventDefault();
     prescModal.classList.remove("hidden");
-    modalUnderlay.classList.remove("hidden");
     prescModal.classList.add("flex");
   });
-});
-
-// prevents scrolling on UNDERLAY when modal is open
-modalUnderlay.addEventListener("wheel", function (event) {
-  event.preventDefault();
 });
 
 // prevents scrolling on opened MODAL
 prescModal.addEventListener("wheel", function (event) {
   event.preventDefault();
+});
+
+// exit MODAL with escape key
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    prescModal.classList.add("hidden");
+  }
 });
 
 // #MODAL-ONCOLOGIST LEARN MORE
@@ -109,13 +106,11 @@ const oncolModal = document.querySelector(".oncologist-more-modal");
 // CLOSE modal
 oncolClose.addEventListener("click", function () {
   oncolModal.classList.add("hidden");
-  modalUnderlay.classList.add("hidden");
 });
 
 // OPEN modal
 oncolMoreOpen.addEventListener("click", function () {
   oncolModal.classList.remove("hidden");
-  modalUnderlay.classList.remove("hidden");
   oncolModal.classList.add("flex");
 });
 
@@ -123,22 +118,10 @@ oncolModal.addEventListener("wheel", function (event) {
   event.preventDefault();
 });
 
-document.addEventListener("keydown", function (e) {
-  if (
-    (e.key === "Escape" && !oncolModal.classList.contains("hidden")) ||
-    !prescModal.classList.contains("hidden")
-  ) {
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
     oncolModal.classList.add("hidden");
-    modalUnderlay.classList.add("hidden");
-    prescModal.classList.add("hidden");
   }
-});
-
-modalUnderlay.addEventListener("click", function () {
-  oncolModal.classList.add("hidden");
-  modalUnderlay.classList.add("hidden");
-  prescModal.classList.add("hidden");
-  patientModal.classList.add("hidden");
 });
 
 // #ONCOL to REGISTRATION PAGE from REG btn
@@ -162,27 +145,20 @@ const patientModal = document.querySelector(".patient-more-modal");
 patientMoreOpen.addEventListener("click", function () {
   patientModal.classList.remove("hidden");
   patientModal.classList.add("flex");
-  modalUnderlay.classList.remove("hidden");
 });
 
 const patientClose = document.getElementById("patient-close");
 patientClose.addEventListener("click", function () {
   patientModal.classList.add("hidden");
-  modalUnderlay.classList.add("hidden");
 });
 
 patientModal.addEventListener("wheel", function (event) {
   event.preventDefault();
 });
 
-document.addEventListener("keydown", function (e) {
-  if (
-    (e.key === "Escape" && !patientModal.classList.contains("hidden")) ||
-    !prescModal.classList.contains("hidden")
-  ) {
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
     patientModal.classList.add("hidden");
-    modalUnderlay.classList.add("hidden");
-    prescModal.classList.add("hidden");
   }
 });
 

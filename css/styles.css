@@ -537,25 +537,22 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    height: 100%;
+    width: 100%;
     padding: 3.2rem;
-    border-radius: 1.2rem;
     background-color: #fff;
     box-shadow: 5px 5px 5px 0.5px hsla(229, 24%, 17%, 0.3);
     touch-action: none;
     z-index: 30;
 }
 
-.modal-underlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    touch-action: none;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
-    z-index: 20;
+.prescription-all-text {
+    margin: 0 auto;
+    width: 56rem;
+}
+
+.prescription-all-text div {
+    padding-bottom: 3.2rem;
 }
 
 /* -MODAL: ONCOL/PATIENT-LEARN MORE */
@@ -563,23 +560,33 @@ a {
 .patient-more-modal {
     flex-direction: column;
     position: fixed;
-    gap: 1.2rem;
+    gap: 2.4rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
-    border-radius: 1.2rem;
     padding: 3.2rem;
-    margin: 2.4rem auto;
     overflow: auto;
     box-shadow: 5px 5px 5px 0.5px hsla(229, 24%, 17%, 0.3);
     touch-action: none;
     z-index: 30;
 }
 
+.body-all-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    width: 56rem;
+}
 
-
+.modal-img {
+    align-self: flex-end;
+    width: 30%;
+    padding-top: 3.2rem;
+}
 /* ?figure out HEIGHT, use VH */
 /* ?might need to reduce size of general-text and header-sec */
 /* ?then, can move onto queries */
