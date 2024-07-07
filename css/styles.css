@@ -564,14 +564,15 @@ a {
     gap: 2.4rem;
     top: 0;
     left: 0;
-    overflow-y: auto;
+    overflow-y: scroll;
     /* transform: translate(-50%, -50%); */
     width: 100%;
+    height: 100vh;
     background-color: #fff;
-    /* overflow-y: auto; */
+    overflow-y: auto;
     padding: 3.2rem;
     box-shadow: 5px 5px 5px 0.5px hsla(229, 24%, 17%, 0.3);
-    touch-action: none;
+    /* touch-action: none; */
     z-index: 30;
 }
 
