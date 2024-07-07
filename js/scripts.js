@@ -82,6 +82,7 @@ prescOpen.forEach((link) => {
 // CLOSE modal
 prescClose.addEventListener("click", function () {
   prescModal.classList.add("hidden");
+  prescModal.classList.remove("flex");
   document.body.classList.remove("no-scroll");
 });
 
@@ -112,6 +113,7 @@ oncolMoreOpen.addEventListener("click", function () {
 // CLOSE modal
 oncolClose.addEventListener("click", function () {
   oncolModal.classList.add("hidden");
+  oncolModal.classList.remove("flex");
   document.body.classList.remove("no-scroll");
 });
 
@@ -163,6 +165,7 @@ patientMoreOpen.addEventListener("click", function () {
 const patientClose = document.getElementById("patient-close");
 patientClose.addEventListener("click", function () {
   patientModal.classList.add("hidden");
+  patientModal.classList.remove("flex");
   document.body.classList.remove("no-scroll");
 });
 
