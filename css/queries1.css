@@ -516,6 +516,9 @@ FONT SIZE SYSTEM (px)
 
     .section-services { padding: 4.8rem 0;}
 
+    /* registration form Oncologist */
+    .main-form { grid-template-columns: 1fr}
+
     /* ALL modals */
     .body-all-text { width: 28rem;}
 }
