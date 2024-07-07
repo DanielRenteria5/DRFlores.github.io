@@ -53,6 +53,7 @@ const navLinks = document.querySelectorAll("a:link");
 
 btnMobileNav.addEventListener("click", function () {
   headerEle.classList.toggle("nav-open");
+  document.body.classList.toggle("no-scroll");
 });
 
 navLinks.forEach((link) => {
