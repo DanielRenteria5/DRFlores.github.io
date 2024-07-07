@@ -168,7 +168,7 @@ FONT SIZE SYSTEM (px)
 
     /* setion-patient */
     .patient { gap: 2.4rem;}
-    .patient .section-headers { align-self: center;}
+    .patient .section-headers { align-self: center; padding: 3.2rem 0;}
     .patient-image { width: 100%;}
     .padding-top-lg { padding-top: 2.4rem;}
     .grid-segments { grid-template-columns: repeat(2, 1fr);}
