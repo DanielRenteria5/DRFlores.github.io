@@ -177,6 +177,13 @@ a {
     overflow: hidden;
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
 /* fade in ANIMATION*/
 .fade {
     opacity: 0;
@@ -416,21 +423,24 @@ a {
 .oncologist {
     display: flex;
     align-items: center;
-    gap: 4.8rem;
+    gap: 3.2rem;
     padding: 0 3.2rem;
 }
 
-.oncologist img {
+.oncologist .image-container {
     flex: 1;
-    max-width: 40%;
+}
+
+.oncologist img {
+    width: 80%;
     height: auto;
-    object-fit: cover;
-    align-self: flex-end;
+    /* object-fit: cover; */
     display: block;
 }
 
 .oncologist-text {
-    max-width: 56rem;
+    flex: 1;
+    width: 100%;
 }
 
 .oncologist-text .section-headers {
@@ -441,7 +451,7 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.6rem;
-    padding-bottom: 4.8rem;
+    padding-bottom: 6.4rem;
 }
 
 /* -PATIENT SECTION */
@@ -451,7 +461,7 @@ a {
 
 .patient {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 4.8rem;
     padding: 0 3.2rem;
 }
@@ -464,16 +474,20 @@ a {
 
 .patient .section-headers {
     flex: 1;
-    padding-bottom: 0;
+    padding: 3.2rem 0;
+    width: 100%;
+}
+
+.patient .image-container {
+    flex: 1;
 }
 
 .patient-image {
-    flex: 1;
     align-self: flex-start;
-    max-width: 60%;
+    width: 100%;
     height: auto;
     object-fit: cover;
-    padding-bottom: 6.4rem;
+    /* padding-bottom: 6.4rem; */
     display: block;
 }
 
@@ -549,6 +563,17 @@ a {
     /* touch-action: none; */
     overflow-y: auto;
     z-index: 30;
+}
+
+.prescription-modal-open {
+    color: #7A00E6;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.prescription-modal-open:hover {
+    color: #D6336C;
 }
 
 .prescription-all-text {

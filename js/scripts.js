@@ -62,22 +62,29 @@ navLinks.forEach((link) => {
 });
 
 // #MODAL-PRESCRIPT and PATIENT INFO - close
-const prescOpen = document.querySelectorAll(".prescription-modal-open");
+const prescOpen = document.querySelector(".prescription-modal-open");
 const prescClose = document.querySelector("#prescription-modal-close");
 
 // modal-window
 const prescModal = document.querySelector(".prescription-modal");
 
 // OPEN modal
-prescOpen.forEach((link) => {
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-    prescModal.classList.remove("hidden");
-    prescModal.classList.add("flex");
-    // prevents page underneath the modal from moving while scrolling in the modal window
-    document.body.classList.add("no-scroll");
-  });
+
+prescOpen.addEventListener("click", function () {
+  prescModal.classList.remove("hidden");
+  prescModal.classList.add("flex");
+  document.body.classList.add("no-scroll");
 });
+
+// prescOpen.forEach((link) => {
+//   link.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     prescModal.classList.remove("hidden");
+//     prescModal.classList.add("flex");
+//     // prevents page underneath the modal from moving while scrolling in the modal window
+//     document.body.classList.add("no-scroll");
+//   });
+// });
 
 // CLOSE modal
 prescClose.addEventListener("click", function () {
