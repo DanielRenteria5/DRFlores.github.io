@@ -68,11 +68,6 @@ const prescClose = document.querySelector("#prescription-modal-close");
 // modal-window
 const prescModal = document.querySelector(".prescription-modal");
 
-// CLOSE modal
-prescClose.addEventListener("click", function () {
-  prescModal.classList.add("hidden");
-});
-
 // OPEN modal
 prescOpen.forEach((link) => {
   link.addEventListener("click", function (event) {
@@ -84,9 +79,10 @@ prescOpen.forEach((link) => {
   });
 });
 
-// prevents scrolling on opened MODAL
-prescModal.addEventListener("wheel", function (event) {
-  event.preventDefault();
+// CLOSE modal
+prescClose.addEventListener("click", function () {
+  prescModal.classList.add("hidden");
+  document.body.classList.remove("no-scroll");
 });
 
 // exit MODAL with escape key
@@ -105,17 +101,18 @@ const oncolClose = document.getElementById("oncol-close");
 // oncol-learn-more-modal
 const oncolModal = document.querySelector(".oncologist-more-modal");
 
-// CLOSE modal
-oncolClose.addEventListener("click", function () {
-  oncolModal.classList.add("hidden");
-});
-
 // OPEN modal
 oncolMoreOpen.addEventListener("click", function () {
   oncolModal.classList.remove("hidden");
   oncolModal.classList.add("flex");
   // prevents page underneath the modal from moving while scrolling in the modal window
   document.body.classList.add("no-scroll");
+});
+
+// CLOSE modal
+oncolClose.addEventListener("click", function () {
+  oncolModal.classList.add("hidden");
+  document.body.classList.remove("no-scroll");
 });
 
 oncolModal.addEventListener("wheel", function (event) {
@@ -154,6 +151,7 @@ patientRegister.addEventListener("click", function () {
 const patientMoreOpen = document.getElementById("patient-more-open");
 const patientModal = document.querySelector(".patient-more-modal");
 
+// OPEN modal
 patientMoreOpen.addEventListener("click", function () {
   patientModal.classList.remove("hidden");
   patientModal.classList.add("flex");
@@ -161,9 +159,11 @@ patientMoreOpen.addEventListener("click", function () {
   document.body.classList.add("no-scroll");
 });
 
+// CLOSE modal
 const patientClose = document.getElementById("patient-close");
 patientClose.addEventListener("click", function () {
   patientModal.classList.add("hidden");
+  document.body.classList.remove("no-scroll");
 });
 
 patientModal.addEventListener("wheel", function (event) {
