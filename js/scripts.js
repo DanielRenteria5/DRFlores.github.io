@@ -79,6 +79,8 @@ prescOpen.forEach((link) => {
     event.preventDefault();
     prescModal.classList.remove("hidden");
     prescModal.classList.add("flex");
+    // prevents page underneath the modal from moving while scrolling in the modal window
+    document.body.classList.add("no-scroll");
   });
 });
 
@@ -112,11 +114,21 @@ oncolClose.addEventListener("click", function () {
 oncolMoreOpen.addEventListener("click", function () {
   oncolModal.classList.remove("hidden");
   oncolModal.classList.add("flex");
+  // prevents page underneath the modal from moving while scrolling in the modal window
+  document.body.classList.add("no-scroll");
 });
 
 oncolModal.addEventListener("wheel", function (event) {
   event.preventDefault();
 });
+
+// oncolModal.addEventListener(
+//   "touchmove",
+//   function (event) {
+//     event.stopPropagation();
+//   },
+//   { passive: true }
+// );
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
@@ -145,6 +157,8 @@ const patientModal = document.querySelector(".patient-more-modal");
 patientMoreOpen.addEventListener("click", function () {
   patientModal.classList.remove("hidden");
   patientModal.classList.add("flex");
+  // prevents page underneath the modal from moving while scrolling in the modal window
+  document.body.classList.add("no-scroll");
 });
 
 const patientClose = document.getElementById("patient-close");

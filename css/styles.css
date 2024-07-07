@@ -173,6 +173,10 @@ a {
     color: #7A00E6;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 /* fade in ANIMATION*/
 .fade {
     opacity: 0;
